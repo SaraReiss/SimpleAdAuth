@@ -9,14 +9,17 @@
                     <span class="text-danger">@ViewBag.Message</span>
                 }
                 <form method="post" action="/account/login">
-                    <input type="text" class="form-control" name="email" placeholder="Email" />
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Email" />
                     <br />
-                    <input type="password" class="form-control" name="password" placeholder="Password" />
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" />
                     <br />
-                    <button class="btn btn-primary w-100 btn-lg">Login</button>
+                    <button disabled id="login" class="btn btn-primary w-100 btn-lg">Login</button>
                     <a href="/account/signup">Don't have an account? Sign up here!</a>
                 </form>
             </div>
         </div>
     </main>
 </div>
+@section Scripts{
+    <script src="~/js/loginform.js"></script>
+}
